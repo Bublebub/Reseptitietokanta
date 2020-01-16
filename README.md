@@ -15,3 +15,7 @@ Tarkoituksena on laatia reseptitietokanta, josta käyttäjät voivat etsiä ja t
   * Käyttäjien listaus/hallinnointi
   * Reseptien lisäys/muokkaus/poisto
   * Raaka-aineiden lisäys/muokkaus/poisto
+
+#### Muuta:
+
+Linkki tietokantakaavioon: [Tietokantakaavio](https://github.com/Bublebub/Reseptitietokanta/blob/master/doc/tietokantakaavio.png)
