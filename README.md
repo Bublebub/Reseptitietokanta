@@ -18,4 +18,4 @@ Tarkoituksena on laatia reseptitietokanta, josta käyttäjät voivat etsiä ja t
 
 #### Muuta:
 
-Linkki tietokantakaavioon: [Tietokantakaavio](https://github.com/Bublebub/Reseptitietokanta/blob/master/doc/tietokantakaavio.png)
+Linkki tietokantakaavioon: [Tietokantakaavio](https://github.com/Bublebub/Reseptitietokanta/blob/master/documentation/tietokantakaavio.png)
