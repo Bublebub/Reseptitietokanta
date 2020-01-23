@@ -18,5 +18,7 @@ Tarkoituksena on laatia reseptitietokanta, josta käyttäjät voivat etsiä ja t
 
 #### Muuta:
 
-Tietokantakaavio:
+Tietokantakaavio:\
 ![TietokantakaavioKuva](https://github.com/Bublebub/Reseptitietokanta/blob/master/documentation/tietokantakaavio.png)
+
+Linkki Herokun versioon: [Heroku](https://reseptitietokanta.herokuapp.com/)
