@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block body %}
+	<table>
+		<th>Ingredients</th>
+		{% for ingredient in ingredients %}
+		<tr>
+			<td>{{ ingredient.name }}</td>
+			<td>
+				<form method="POST" action="{{ url_for('ingredients_modify', p_id=ingredient.id) }}">
+					<input type="submit" value="Modify">
+				</form>
+			</td>
+		</tr>
+		{% endfor %}
+	</table>
+{% endblock %}

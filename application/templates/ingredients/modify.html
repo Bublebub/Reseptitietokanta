@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<!-- Page to modify and update selected ingredient -->
+
+	<h2>Update Ingredient</h2>
+	<form method="POST" action="{{ url_for('ingredients_update', p_id=ingredient.id) }} ">
+		<table>
+			<tr>
+				<th>Ingredient</th>
+				<th>New name</th>
+			</tr>
+			<tr>
+				<td>{{ ingredient.name }}</td>
+				<td><input type="text" name="newName"></td>
+				<td><input type="submit" value="Update"></td>
+			</tr>
+		</table>
+	</form>
+{% endblock %}

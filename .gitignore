@@ -1,5 +1,6 @@
 venv
 __pycache__
+recipe.db
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
