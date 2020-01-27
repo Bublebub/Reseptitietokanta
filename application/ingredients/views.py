@@ -1,6 +1,7 @@
 from application import app, db
 from flask import render_template, request, redirect, url_for
 from application.ingredients.models import Ingredient
+from application.ingredients.forms import IngredientForm
 
 @app.route("/ingredients/", methods=["GET"])
 def ingredients_index():
@@ -8,13 +9,18 @@ def ingredients_index():
 
 @app.route("/ingredients/new/")
 def ingredients_form():
-    return render_template("ingredients/new.html")
+    return render_template("ingredients/new.html", form = IngredientForm())
 
 @app.route("/ingredients/", methods=["POST"])
 def ingredients_create():
-    i = Ingredient(request.form.get("name"))
+    form = IngredientForm(request.form)
     
-    db.session().add(i);
+    if not form.validate():
+        return render_template("ingredients/new.html", form = form)
+    
+    i_name = Ingredient(form.name.data)
+    
+    db.session().add(i_name);
     db.session().commit()
     
     return redirect(url_for("ingredients_index"))
