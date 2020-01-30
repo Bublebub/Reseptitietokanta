@@ -6,6 +6,18 @@
 	</head>
 	
 	<body>
+	
+		{% if current_user.is_authenticated %}
+		<p>
+			Logged in with name {{ current_user.name }}. <a href="{{ url_for('auth_logout') }}">Logout</a>
+		</p>
+		{% else %}
+		<ul>
+			<li><a href="{{ url_for('auth_login') }}">Login</a></li>
+			<li><a href="{{ url_for('auth_create_account') }}">Create account</a></li>
+		</ul>
+		{% endif %}
+	
 		<ul>
 			<li><a href="{{ url_for('index') }}">Front page</a></li>
 			<li><a href="{{ url_for('ingredients_index') }}">List ingredients</a></li>
