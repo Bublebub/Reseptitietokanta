@@ -5,9 +5,16 @@ app = Flask(__name__)
 
 from flask_sqlalchemy import SQLAlchemy
 
-# app confiqurations - database and printing
-app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///recipe.db"
-app.config["SQLALCHEMY_ECHO"] = True
+import os
+
+#app configurations on different environments (Heroku & local)
+if os.environ.get("HEROKU"):
+    #Heroku database
+    app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get("DATABASE_URL")
+else:
+    #local database and printing
+    app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///recipe.db"
+    app.config["SQLALCHEMY_ECHO"] = True
 
 # initialize db object
 db = SQLAlchemy(app)
@@ -38,4 +45,7 @@ def load_user(user_id):
     return User.query.get(user_id)
 
 # create database tables
-db.create_all();
+try:
+    db.create_all()
+except:
+    pass
