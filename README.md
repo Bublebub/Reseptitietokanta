@@ -9,12 +9,17 @@ Tarkoituksena on laatia reseptitietokanta, josta käyttäjät voivat etsiä ja t
   * Reseptien listaus/haku
   * Reseptien lisääminen keittokirjoihin
   * Reseptien poistaminen keittokirjoista
-
+  
 * Ylläpito
   * Kirjautuminen
   * Käyttäjien listaus/hallinnointi
   * Reseptien lisäys/muokkaus/poisto
   * Raaka-aineiden lisäys/muokkaus/poisto
+  
+#### Testitunnukset:
+* Käyttäjä 
+  * Username: *test*
+  * Password: *pass*
 
 #### Muuta:
 
